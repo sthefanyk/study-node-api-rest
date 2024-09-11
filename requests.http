@@ -1,2 +1,17 @@
-GET http://localhost:3333/hello
+GET http://localhost:3333/transactions HTTP/1.1
 
+###
+GET http://localhost:3333/transactions/c1f3a8a1-20ec-4387-b8a0-769d78b934b2 HTTP/1.1
+
+###
+GET http://localhost:3333/transactions/summary HTTP/1.1
+
+###
+POST http://localhost:3333/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Hamburguer",
+    "amount": 65,
+    "type": "debit"
+}
